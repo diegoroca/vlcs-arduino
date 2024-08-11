@@ -1,5 +1,5 @@
 #define LED_PIN 13  // Pin del LED 
-#define BLINK_FREQUENCY 1000  // Frecuencia de parpadeo en Hz (MAX 8MHz MIN 1Hz)
+#define BLINK_FREQUENCY 10  // Frecuencia de parpadeo en Hz (MAX 8MHz MIN 1Hz)
 
 void setup() {
   pinMode(LED_PIN, OUTPUT);
@@ -42,6 +42,7 @@ ISR(TIMER1_COMPA_vect) {
   static bool ledState = LOW;
 
   // Conmutar el estado del LED
+  digitalRead(LED_PIN);
   ledState = !ledState;
   digitalWrite(LED_PIN, ledState);
 }
