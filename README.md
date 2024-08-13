@@ -23,3 +23,9 @@ Para el receptor usamos un microcontrolador, un LDR, y un OPAM LM393. Estos dos 
 ### Fotografía
 
 ![Fotor del receptor](/images/rx_photo.jpeg)
+
+## Transmisión
+
+Para visualizar la transmision sin necesidad de un osciloscopio se envia el valor recibido al puerto UART para que sea visible desde cualquier Serial Plotter. Posteriormente se agregará la función de imprimir la frecuencia actual a la que se está transmitiendo.
+
+![Screenshot de la transmisión](/images/serial_monitor.png)
